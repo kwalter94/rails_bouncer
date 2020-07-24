@@ -60,7 +60,7 @@ module RailsBouncer
       # query in the bouncer will be allowed (to deny set fallback_policy to :deny)
       def authorise_through(bouncer, fallback_policy: :deny)
         unless %i[allow deny].include?(fallback_policy)
-          raise BouncerError, "Invalid fallback_policy #{fallback_policy}, allowed values are :deny and :allow"
+          raise InvalidFallbackPolicy, "Invalid fallback_policy #{fallback_policy}, allowed values are :deny and :allow"
         end
 
         self.bouncer = bouncer
