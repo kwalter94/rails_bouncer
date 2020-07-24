@@ -1,11 +1,5 @@
-require "rails_bouncer/railtie"
-require "rails_bouncer/auth"
+# frozen_string_literal: true
 
-module RailsBouncer
-  class BouncerError < StandarError; end
-  class NotAuthorised < BouncerError; end
-
-  class << ActionController::Base
-    include Auth
-  end
-end
+require 'rails_bouncer/bouncer'
+require 'rails_bouncer/exceptions'
+require 'rails_bouncer/railtie'
