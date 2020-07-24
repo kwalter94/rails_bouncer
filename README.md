@@ -1,5 +1,7 @@
 # RailsBouncer
-Short description and motivation.
+
+An authorisation plugin for Rails inspired by https://github.com/varvet/pundit
+and https://github.com/kwalter94/RailsBindPrivileges.
 
 ## Usage
 
