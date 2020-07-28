@@ -1,0 +1,10 @@
+image: "ruby:2.6"
+
+before_script:
+  - apt-get install -y ruby-dev
+  - gem install bundler
+  - bundle install
+
+run-test:
+  script:
+    - bin/test
