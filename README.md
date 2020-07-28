@@ -1,3 +1,5 @@
+![Build Status](https://gitlab.com/kwalter94/rails-bouncer/badges/master/pipeline.svg)
+
 # RailsBouncer
 
 An authorisation plugin for Rails inspired by https://github.com/varvet/pundit
