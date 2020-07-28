@@ -1,4 +1,4 @@
-![Build Status](https://gitlab.com/kwalter94/rails-bouncer/badges/master/pipeline.svg)
+![Build Status](https://gitlab.com/kwalter94/rails-bouncer/badges/master/pipeline.svg) ![Coverage](https://gitlab.com/kwalter94/rails-bouncer/badges/master/coverage.svg)
 
 # RailsBouncer
 
