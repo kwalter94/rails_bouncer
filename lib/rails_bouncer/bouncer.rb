@@ -29,6 +29,15 @@ module RailsBouncer
 
         raise NotAuthorised
       end
+
+      rescue_from NotAuthorised, with: :render_not_authorised
+
+      def render_not_authorised(exception)
+        respond_to do |format|
+          format.json { render json: { exception: exception }, status: :forbidden }
+          format.html { render file: "#{Rails.root}/public/403.html", status: :forbidden }
+        end
+      end
     end
 
     class_methods do
