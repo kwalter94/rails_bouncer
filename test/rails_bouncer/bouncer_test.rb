@@ -13,6 +13,8 @@ module RailsBouncer
           self.action = name
         end
 
+        def self.rescue_from(*_args); end
+
         include RailsBouncer::Bouncer
       end
 
@@ -22,6 +24,8 @@ module RailsBouncer
     test 'authorise raises MissingBouncer if bouncer is not set' do
       clazz = Class.new do
         def self.before_action(_action); end
+
+        def self.rescue_from(*_args); end
 
         include RailsBouncer::Bouncer
       end
@@ -38,6 +42,8 @@ module RailsBouncer
 
       clazz = Class.new do
         def self.before_action(_action); end
+
+        def self.rescue_from(*_args); end
 
         def action_name
           :index
@@ -57,6 +63,8 @@ module RailsBouncer
       clazz = Class.new do
         def self.before_action(_action); end
 
+        def self.rescue_from(*_args); end
+
         def action_name
           :index
         end
@@ -74,6 +82,8 @@ module RailsBouncer
     test 'authorise returns when a bouncer predicate is missing but fallback_policy is set to :allow' do
       clazz = Class.new do
         def self.before_action(_action); end
+
+        def self.rescue_from(*_args); end
 
         def action_name
           :index
@@ -93,6 +103,8 @@ module RailsBouncer
       assert_raises(RailsBouncer::InvalidFallbackPolicy) do
         Class.new do
           def self.before_action(_action); end
+
+          def self.rescue_from(*_args); end
 
           def action_name
             :index
@@ -116,6 +128,8 @@ module RailsBouncer
 
       clazz = Class.new do
         def self.before_action(_action); end
+
+        def self.rescue_from(*_args); end
 
         def action_name
           :index
