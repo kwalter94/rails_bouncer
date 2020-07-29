@@ -51,7 +51,8 @@ gem 'rails_bouncer', git: "https://gitlab.com/kwalter94/rails-bouncer.git"
 
 And then execute:
 ```bash
-$ bundle
+$ bundle install
+$ rails g bouncer:install
 ```
 
 Or install it yourself as:
